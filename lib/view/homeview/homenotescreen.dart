@@ -30,7 +30,8 @@ class _HomenotescreenState extends State<Homenotescreen> {
               final notep = provider.Note[index];
               return ListTile(
                 title: Text(notep.title),
-                subtitle: Text(notep.dsc), // Fixed: showing description
+                subtitle: Text(notep.dsc),
+                leading: Icon(Icons.book, color: Colors.blue.shade900),// Fixed: showing description
                 trailing: IconButton(
                   icon: const Icon(Icons.delete, color: Colors.red),
                   onPressed: () {

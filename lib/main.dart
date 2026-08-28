@@ -16,8 +16,18 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [ChangeNotifierProvider(create: (_) => Notesprovider())],
       child: MaterialApp(
+
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.cyan,
+            titleTextStyle: TextStyle(
+              color: Colors.white,
+              fontSize: 20
+            )
+          ),
+           scaffoldBackgroundColor: Colors.white,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
         initialRoute: RoutesName.home,
